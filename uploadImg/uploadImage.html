@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>User Info</title>
+  </head>
+  <body>
+     <h2>Add user Details</h2>
+    <form id="myForm">
+    <div>
+        <label>First Name:</label>
+        <input
+          type="text"
+          id="firstName"
+          name="firstName"
+          required="required"
+        /><br /><br />
+      </div>
+      <div required="required">
+        <label>Last Name:</label>
+        <input type="text" id="lastName" name="lastName" /><br /><br />
+      </div>
+      <div required="required">
+        <label>Gender:</label>
+        <input type="radio" id="male" name="gender" value="male" />
+        <label >Male</label>
+        <input type="radio" id="female" name="gender" value="female" />
+        <label >Female</label><br /><br />
+      </div>
+      <div> 
+        <lable>Location:</lable>
+        <select id="location" >
+        <option value="" selected disabled hidden>Select location</option>
+        <option value="Chennai">Chennai</option>
+        <option value="Mumbai">Mumbai</option>
+        <option value="Coimbatore">Coimbatore</option>
+        <option value="Delhi">Delhi</option>
+        <option value="Bangalore">Bangalore</option></select
+      > <br><br>
+      <div>
+        <lable>Subject:</lable>
+        <input type="text" name="subject" id="subject"><br><br>
+      </div>
+      </div>
+      
+        <div>
+        <label for="photo">Photo:</label>
+        <input type="file" id="photo" name="photo" /><br /><br />
+      </div>
+      
+      <div>
+      <input type="button" id="submit" value="Submit" onclick=" submitData()" />
+      <input type="button" value="Cancel" onclick="resetForm()"><br><br></div>
+    </form>
+    <div id="output"></div>
+    <script src="uploadImage.js"></script>
+  </body>
+</html
