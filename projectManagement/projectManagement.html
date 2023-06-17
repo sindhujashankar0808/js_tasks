@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Project Management
+        </title>
+        <style>
+            .highlight {
+                background-color: blue;
+            }
+        </style>
+    </head>
+<body>
+    <h2>Project Management</h2>
+                <form onsubmit="event.preventDefault();onFormSubmit()" autocomplete="off">
+                    <div>
+                    <lable>Project name:</lable>
+                    <input type ="text" name = "projectName" id="projectName">
+                </div><br>
+                <div>
+                    <lable>Assigned to:</lable>
+         <select id="assign" >
+        <option value="" selected disabled hidden>select person</option>
+        <option value="Sindhuja">Sindhuja</option>
+        <option value="Jency">Jency</option>
+        <option value="Amirtha">Amirtha</option>
+        <option value="Jeevisha">Jeevisha</option>
+        <option value="Preethi">Preethi</option></select
+      > </div><br>
+      <div>
+        <lable>Start date:</lable>
+        <input type="date" name="start" id="startDate" />
+      </div><br >
+      <div>
+        <lable>End date:</lable>
+        <input type="date" name="end" id="endDate" />
+      </div><br>
+      <div>
+        <lable>Priority:</lable>
+        <input type="radio" name="priority" value="high" />High
+      <input type="radio" name="priority" value="average" />Average
+      <input type="radio" name="priority" value="low" />Low
+      </div><br>
+        <lable><p>Description:</p></lable>
+        <textarea
+        id="description"
+        rows="4"
+        cols="50"
+        name="comment"
+        form="usrform"
+      ></textarea>
+      <div class="form-submit-button">
+        <input type="submit" value="Submit">
+        <input type="reset" value="Clear">
+         </div>
+         </form>
+         <br>
+         <button
+        type="button"
+        id="all"
+        class="btn"
+        onclick="filterBy('all')"
+        value="all"
+      >
+        All
+      </button>
+      <button
+        type="button"
+        id="high"
+        class="btn"
+        onclick="filterBy('high')"
+        value="high"
+      >
+        High
+      </button>
+      <button
+        type="button"
+        id="low"
+        class="btn"
+        onclick="filterBy('low')"
+        value="low"
+      >
+        Low
+      </button>
+      <button
+        type="button"
+        id="average"
+        class="btn"
+        onclick="filterBy('average')"
+        value="average"
+      >
+        Average
+      </button>
+      <button onclick="deleteAllProjects('all')">Delete all</button>
+    </div>
+         <div id ="output"></div>
+         <script src ="project.js"></script>
+</body>
+</head></html>

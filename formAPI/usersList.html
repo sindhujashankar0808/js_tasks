@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Fetch API</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 style="text-align: center">User List API Call</h1>
+    <div id="form-container"></div>
+    <form onclick="event.preventDefault()" style="text-align: center">
+      <div>
+        <label><b>First name:</b></label>
+        <input
+          type="text"
+          name="first_name"
+          id="first_name"
+          placeholder="Sindhuja"
+        /><br /><br />
+      </div>
+      <div>
+        <label><b>Last name:</b></label>
+        <input
+          type="text"
+          name="last_name"
+          id="last_name"
+          placeholder="Shankar"
+        /><br /><br />
+      </div>
+      <div>
+        <label><b>E-mail:</b></label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="sindhuja@gmail.com"
+        /><br /><br />
+      </div>
+      <div>
+        <input
+          type="button"
+          id="submit"
+          class="btn-submit"
+          onclick="submitForm()"
+          value="Submit"
+        />
+        <input
+          type="button"
+          class="btn-reset"
+          value="Reset"
+          onclick="formReset()"
+        />
+      </div>
+    </form>
+    <div id="loader"></div>
+    <div id="snackbar"></div>
+    <div id="toast">Give valid e-mail</div>
+    <h3><b>Users List</b></h3>
+    <p id="form-loader"></p>
+    <div style="display: none" id="output"></div>
+
+    <!-- <script type="module" src="API.js"></script> -->
+    <script src="usersList.js"></script>
+  </body>
+</html>
